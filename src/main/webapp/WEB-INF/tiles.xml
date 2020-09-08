@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="defaultTemplate"
+		template="/WEB-INF/views/template/default_template.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header"
+			value="/WEB-INF/views/template/header.jsp"></put-attribute>
+		<put-attribute name="left"
+			value="/WEB-INF/views/template/left.jsp"></put-attribute>
+
+		<put-attribute name="body" value=""></put-attribute>
+
+		<put-attribute name="footer"
+			value="/WEB-INF/views/template/footer.jsp"></put-attribute>
+
+	</definition>
+	<definition name="index"
+		template="/WEB-INF/views/template/template1.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/index.jsp"></put-attribute>
+	</definition>
+	<definition name="login"
+		template="/WEB-INF/views/template/template1.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/login.jsp"></put-attribute>
+	</definition>
+	<definition name="home" extends="defaultTemplate">
+		<put-attribute name="title" value="Home"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/index.jsp"></put-attribute>
+	</definition>
+	<definition name="register" template="/WEB-INF/views/template/template1.jsp">
+		<put-attribute name="title" value="Register"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/register.jsp"></put-attribute>
+	</definition>
+	<definition name="list-projects" extends="defaultTemplate">
+		<put-attribute name="title" value="Home"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/list-projects.jsp"></put-attribute>
+	</definition>
+	<definition name="list-projectbyId" extends="defaultTemplate">
+		<put-attribute name="title" value="Home"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/list-projectbyId.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
